@@ -5,13 +5,13 @@
 <!-- namespace:改mapper.xml映射文件的唯一标识并且必须和数据处理层的接口的路径相同-->
 <mapper namespace="com.myoffer.university.mapper.UniversityMapper">
     <!--   必须添加property属性 ，区别于是否加主键-->
-    <resultMap id="university" type="University">
+    <resultMap id="university" type="com.myoffer.university.model.University">
         <id column="id" property="id"/>
         <result column="officialName" property="officialName" />
         <result column="alias" property="alias" />
         <result column="shortName" property="shortName" />
     </resultMap>
-    <select id="queryAll" resultType="University">
+    <select id="queryAll" resultType="com.myoffer.university.model.University">
         select * from university
     </select>
 </mapper>
